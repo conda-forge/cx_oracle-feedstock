@@ -1,5 +1,5 @@
 {% set name = "cx_Oracle" %}
-{% set version = "6.0.3" %}
+{% set version = "7.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f287776f9b24054fe3470751e44355d28122dcc2aceba7d75e68386125459525
+  sha256: 75ee5edccf385d8e8b1443058909fbf3477bb1db12ab7f367aafba8d993fc828
   patches:
     - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
 
