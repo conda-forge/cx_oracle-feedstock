@@ -12,7 +12,7 @@ source:
     - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
