@@ -1,8 +1,8 @@
-{% set version = 7.0.0 %}
+{% set version = "7.0.0" %}
 
 package:
   name: cx_oracle
-  version: "{{ version }}"
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/c/cx_Oracle/cx_Oracle-{{ version }}.tar.gz
