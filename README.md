@@ -5,7 +5,7 @@ About cx_oracle
 
 Home: https://oracle.github.io/python-cx_Oracle
 
-Package license: BSD
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
