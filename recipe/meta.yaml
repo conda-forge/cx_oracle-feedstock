@@ -1,21 +1,22 @@
-{% set name = "cx_Oracle" %}
 {% set version = "7.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: cx_oracle
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/cx_Oracle/cx_Oracle-{{ version }}.tar.gz
   sha256: 75ee5edccf385d8e8b1443058909fbf3477bb1db12ab7f367aafba8d993fc828
   patches:
     - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - pip
     - python
@@ -29,7 +30,7 @@ test:
 
 about:
   home: https://oracle.github.io/python-cx_Oracle
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: Python interface to Oracle
