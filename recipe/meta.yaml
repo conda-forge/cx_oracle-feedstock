@@ -1,4 +1,4 @@
-{% set version = "8.1.0" %}
+{% set version = "8.2.0" %}
 
 package:
   name: cx_oracle
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cx_Oracle/cx_Oracle-{{ version }}.tar.gz
-  sha256: e1698c5522ee1355e552b30bfa0a58e6e772475b882c5d69d158bd7e6aed45de
+  sha256: 0daff9b847e69b8d837d8922b980082112f30d2c81feab0ee0e5313e2a64589d
   patches:
     - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
