@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cx_Oracle/cx_Oracle-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/cx_Oracle/cx_Oracle-{{ version }}.tar.gz
   sha256: 3b2d215af4441463c97ea469b9cc307460739f89fdfa8ea222ea3518f1a424d9
   patches:
     - 0001-Add-macro-for-isnan-msvc-2008.patch  # [win and vc<14]
 
 build:
-  number: 4
+  number: 5
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
